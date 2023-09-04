@@ -1,0 +1,28 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, howmany INTEGER, rating INTEGER);
+
+INSERT into store VALUES (1, "small black", 2.00, 40, 9);
+INSERT into store VALUES (2, "medium black", 3.00, 50, 8);
+INSERT into store VALUES (3, "large black", 4.00, 40, 8);
+INSERT into store VALUES (4, "iced small black", 3.00, 25, 9);
+INSERT into store VALUES (5, "iced medium black", 4.000, 30, 8);
+INSERT into store VALUES (6, "iced large black", 5.00, 30, 7);
+INSERT into store VALUES (7, "small latte", 3.50, 30, 8);
+INSERT into store VALUES (8, "medium latte", 4.50, 40, 8);
+INSERT into store VALUES (9, "large latte", 5.50, 40, 9);
+INSERT into store VALUES (10, "iced small latte", 4.00, 25, 8);
+INSERT into store VALUES (11, "iced medium latte", 5.00, 30, 7);
+INSERT into store VALUES (12, "iced large latte", 6.00, 30, 7);
+INSERT into store VALUES (13, "muffin", 2.50, 20, 8);
+INSERT into store VALUES (14, "donut", 1.99, 20, 8);
+INSERT into store VALUES (15, "bagel", 2.20, 20, 9);
+
+SELECT * FROM store;
+
+--display the database ordered by price
+SELECT * FROM store
+ORDER BY price asc;
+
+--what are the 5 best rated items?
+SELECT item, price, rating FROM store
+ORDER BY rating asc
+limit 5;
